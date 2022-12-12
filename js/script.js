@@ -19,17 +19,46 @@ button.addEventListener("click", function(){
     }
     resultElement.innerHTML= array[0];
     resultPcElement.innerHTML= array[1];
-
-    
     if(array[0]>array[1]){
         winnerElement.innerHTML=`<h2 class="text-success">Jimmy Win</h2>`;
     }else if (array[0]<array[1]){
         winnerElement.innerHTML=`<h2 class="text-danger">PC Win</h2>`
     }else{ winnerElement.innerHTML=`<h2 class="text-info">DRAW</h2>`};
+})
+
+
+
+
+// ESERCIZIO 2 - Finta Login
+// Inventa una lista di email autorizzate
+// Chiedi all’utente la sua email, con un piccolo form.
+// controlla che sia nella lista di chi può accedere,
+// stampa un messaggio appropriato sull’esito del controllo.
+
+const mailElement= document.getElementById("mail")
+const submitElement=document.getElementById("submit")
+const accessElement=document.getElementById("access")
+
+const validMail= ["jimmy@palermo.com","jimmy@sicilia.com","jimmy@italia.com"];
+
+
+
+
+submitElement.addEventListener("click", function(){
     
+    if( mailElement.value === validMail[0] || mailElement.value === validMail[1] || mailElement.value === validMail[2] )
+    {
+    accessElement.innerHTML=`<h2 class="text-success">Welcome back Sir</h2>`;
+    mailElement.value=""
+    }
+    else{
+        accessElement.innerHTML=`<h2 class="text-danger">YOU SHALL NOT PASS!!!</h2>`
+    }
 
 
 
 
-    
+
+
+   
 })
