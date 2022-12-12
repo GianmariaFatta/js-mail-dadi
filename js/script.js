@@ -14,20 +14,18 @@ button.addEventListener("click", function(){
         //generiamo numero random da 1 a 6
         const randomNumber = [Math.floor(Math.random () *6)+1];
         array.push(randomNumber)
-        console.log(randomNumber)
-        
-        // const rollTwice=randomNumber[1]
+        console.log(randomNumber);
         
     }
-    resultElement.innerHTML= array[0]
-    resultPcElement.innerHTML= array[1]
+    resultElement.innerHTML= array[0];
+    resultPcElement.innerHTML= array[1];
 
     
     if(array[0]>array[1]){
         winnerElement.innerHTML=`<h2 class="text-success">Jimmy Win</h2>`;
     }else if (array[0]<array[1]){
-        winnerElement.innerHTML=`<h2 class="text-danger">PC Win</h2>`;
-    }else{ winnerElement.innerHTML=`<h2 class="text-info">DRAW</h2>`}
+        winnerElement.innerHTML=`<h2 class="text-danger">PC Win</h2>`
+    }else{ winnerElement.innerHTML=`<h2 class="text-info">DRAW</h2>`};
     
 
 
